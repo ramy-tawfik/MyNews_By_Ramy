@@ -13,6 +13,7 @@
 
 ***
 
+
 <img width="380" alt="Screenshot_1603832023" src="https://user-images.githubusercontent.com/44054860/99161914-561bb000-26c5-11eb-952d-2c255295991c.png">
 
 **************************************************************
@@ -27,4 +28,19 @@
 <img width="380" alt="Screenshot_1603832023" src="https://user-images.githubusercontent.com/44054860/99161917-56b44680-26c5-11eb-84de-7fd80b82514c.png">
 
 **************************************************************
+Loding Indicator
+
 <img width="380" alt="Screenshot_1603832023" src="https://user-images.githubusercontent.com/44054860/99161918-56b44680-26c5-11eb-8ae6-4a4890c01153.png">
+
+**************************************************************
+
+## V2
+
+<img width="380" alt="Screenshot_1603832023" src="https://user-images.githubusercontent.com/44054860/99382835-17d7e980-289b-11eb-9ba3-442ddf2b9d55.png">
+
+**************************************************************
+
+<img width="380" alt="Screenshot_1603832023" src="https://user-images.githubusercontent.com/44054860/99382836-18708000-289b-11eb-894e-873157de720c.png">
+
+**************************************************************
+
