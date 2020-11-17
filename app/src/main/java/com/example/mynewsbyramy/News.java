@@ -7,21 +7,21 @@ public class News {
     private String mWebPublicationDate;
     private String mWebUrl;
     private String mAuthor;
-
-
-    public News(String sectionName, String webTitle, String webPublicationDate, String webUrl, String author) {
-        this.mSectionName = sectionName;
-        this.mWebTitle = webTitle;
-        this.mWebPublicationDate = webPublicationDate;
-        this.mWebUrl = webUrl;
-        this.mAuthor = author;
-    }
+    private String mThumbnailUrl;
 
     public News(String sectionName, String webTitle, String webPublicationDate, String webUrl) {
         this.mSectionName = sectionName;
         this.mWebTitle = webTitle;
         this.mWebPublicationDate = webPublicationDate;
         this.mWebUrl = webUrl;
+    }
+
+    public News(String sectionName, String webTitle, String webPublicationDate, String webUrl, String thumbnailUrl) {
+        this.mSectionName = sectionName;
+        this.mWebTitle = webTitle;
+        this.mWebPublicationDate = webPublicationDate;
+        this.mWebUrl = webUrl;
+        this.mThumbnailUrl = thumbnailUrl;
     }
 
 
@@ -65,5 +65,12 @@ public class News {
         this.mAuthor = author;
     }
 
+    public String getmThumbnailUrl() {
+        return mThumbnailUrl;
+    }
+
+    public void setmThumbnailUrl(String mThumbnailUrl) {
+        this.mThumbnailUrl = mThumbnailUrl;
+    }
 
 }

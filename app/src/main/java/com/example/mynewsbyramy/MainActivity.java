@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
 
     private static final String GUARDIAN_REQUEST_URL =
-            "https://content.guardianapis.com/search?";
+            "https://content.guardianapis.com/search?show-fields=thumbnail&";
     ArrayList<News> newsArrayList = new ArrayList<>();
     /**
      * TextView that is displayed when the list is empty
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<List<News>> onCreateLoader(int id, Bundle args) {
 
-        String tag = "election";
+        String tag = "soccer";
         // parse breaks apart the URI string that's passed into its parameter
         Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
 

@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,6 +40,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView sectionNameTextView = listItemView.findViewById(R.id.sectionName_textView);
         TextView authorTextView = listItemView.findViewById(R.id.author_textView);
         TextView dateView = listItemView.findViewById(R.id.date);
+        ImageView thumbnailImage = listItemView.findViewById(R.id.thumbnailImage);
 
         String title = currentNewsArticle.getWebTitle();
         String publishDate = currentNewsArticle.getWebPublicationDate();
@@ -58,6 +62,11 @@ public class NewsAdapter extends ArrayAdapter<News> {
         sectionNameTextView.setText(currentNewsArticle.getSectionName());
         authorTextView.setText(currentNewsArticle.getAuthor());
         authorTextView.setText(authorPart);
+        Picasso.get()
+                .load(currentNewsArticle.getmThumbnailUrl())
+                .placeholder(R.drawable.default_image)
+                .resize(150, 150)
+                .into(thumbnailImage);
 
         String formattedDate = formatDate(publishDate);
 

@@ -6,6 +6,7 @@
     style="@style/CardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:contentPadding="4dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -13,54 +14,67 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="4dp"
-            android:layout_weight="1">
+        <ImageView
+            android:id="@+id/thumbnailImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:cropToPadding="true"
+            android:fadingEdge="vertical"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/default_image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="64dp">
+
 
             <TextView
                 android:id="@+id/webTitle_textView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"
+                android:layout_marginBottom="8dp"
                 android:ellipsize="end"
-                android:maxLines="2"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sectionName_textView"
                 tools:text="Long placeholder location that should wrap to more than 2 lines of text" />
+
 
             <TextView
                 android:id="@+id/date"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_margin="4dp"
                 android:gravity="center_vertical"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="Mar 6, 2010" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp">
 
             <TextView
                 android:id="@+id/sectionName_textView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="Section Name " />
 
             <TextView
@@ -71,8 +85,12 @@
                 android:maxLines="2"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/webTitle_textView"
                 tools:text="Author Name " />
-        </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 

@@ -163,8 +163,11 @@ public final class QueryUtils {
                 // Extract the value for the key called "webUrl"
                 String webUrl = currentNewsArticle.getString("webUrl");
 
+                JSONObject thumbnail = currentNewsArticle.getJSONObject("fields");
 
-                News news = new News(sectionName, webTitle, webPublicationDate, webUrl);
+                String thumbnailString = thumbnail.optString("thumbnail");
+
+                News news = new News(sectionName, webTitle, webPublicationDate, webUrl, thumbnailString);
 
                 // Add the new News to the list of newsList.
                 newsList.add(news);
